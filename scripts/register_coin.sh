@@ -38,7 +38,9 @@ cat > $POOL_DIR/fractal.json <<EOF
       "target_time": 45,
       "retarget_time": 300,
       "variance_percent": 20
-    }
+    },
+
+    "template_refresh_interval": 30
   }
 }
 EOF
