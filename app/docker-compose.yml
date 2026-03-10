@@ -18,12 +18,13 @@ services:
       - /var/lib/5tratumos/pool:/pool
       - ../scripts:/scripts
 
-    command: >
-      sh -c "
-      chmod +x /scripts/register_coin.sh &&
-      /scripts/register_coin.sh &&
-      bitcoind -datadir=/data
-      "
+command: >
+  sh -c "
+  sleep 10 &&
+  chmod +x /scripts/register_coin.sh &&
+  /scripts/register_coin.sh &&
+  bitcoind -datadir=/data
+  "
 
 volumes:
   fractal-data:
