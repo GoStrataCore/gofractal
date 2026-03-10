@@ -1,0 +1,9 @@
+{
+  "name": "GoFractal",
+  "version": "0.1.0",
+  "description": "Fractal Bitcoin node with GoStrataCore pool integration",
+  "docker-compose": "docker-compose.yml",
+  "category": "Mining",
+  "author": "GoStrataCore",
+  "website": "https://github.com/GoStrataCore"
+}
