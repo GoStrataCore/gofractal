@@ -1,10 +1,13 @@
 #!/bin/bash
 
 POOL_DIR="/pool/coins"
+COIN_FILE="$POOL_DIR/fractal.json"
 
 mkdir -p $POOL_DIR
 
-cat <<EOF > $POOL_DIR/fractal.json
+if [ ! -f "$COIN_FILE" ]; then
+
+cat <<EOF > $COIN_FILE
 {
   "symbol": "FB",
   "coin_type": "fractalbitcoin",
@@ -24,3 +27,9 @@ cat <<EOF > $POOL_DIR/fractal.json
 EOF
 
 echo "Fractal registered with GoStrataCore"
+
+else
+
+echo "Fractal already registered with GoStrataCore"
+
+fi
