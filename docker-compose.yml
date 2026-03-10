@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+
+  gofractal-node:
+
+    build: .
+    container_name: gofractal-node
+
+    restart: unless-stopped
+
+    ports:
+      - "32126:32126"
+
+    volumes:
+      - fractal-data:/data
+      - /var/lib/5tratumos/pool:/pool
+      - ./scripts:/scripts
+
+    command: >
+      sh -c "
+      chmod +x /scripts/register_coin.sh &&
+      /scripts/register_coin.sh &&
+      fractald -datadir=/data
+      "
+
+volumes:
+  fractal-data:
