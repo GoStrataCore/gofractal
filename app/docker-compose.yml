@@ -8,6 +8,7 @@ services:
     container_name: gofractal-node
 
     restart: unless-stopped
+    stop_grace_period: 5m
 
     ports:
       - "32126:32126"
@@ -23,6 +24,6 @@ services:
       /scripts/register_coin.sh &&
       bitcoind -datadir=/data
       "
-      
+
 volumes:
   fractal-data:
