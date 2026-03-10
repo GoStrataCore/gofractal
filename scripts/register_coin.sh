@@ -26,7 +26,7 @@ cat > $POOL_DIR/fractal.json <<EOF
     },
 
     "mining": {
-      "address": "YOUR_POOL_ADDRESS",
+      "address": "1Cq7z4q4NfKFF43aSdJAYh5PN5vMFHSZ4D",
       "network": "mainnet",
       "coinbase_text": "GoStrataCore"
     },
